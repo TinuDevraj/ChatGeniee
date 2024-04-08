@@ -121,9 +121,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 16vh;
 
     .inpt-box{
         margin-bottom: 15%;
+        
 
     }
     

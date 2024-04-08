@@ -185,9 +185,10 @@ function SignUp() {
         </div>
         <h4>Password</h4>
         <div className="relative-container-for-errmsg password-container-signup">
-          <input
+          
+        <input
             className={`input-box ${errors.password && "error-border"}`}
-            type="password"
+            type={showPassword ? "text" : "password"}
             value={password}
             onChange={handlePasswordChange}
             autoComplete="off"
@@ -200,8 +201,9 @@ function SignUp() {
           ) : (
             <FontAwesomeIcon icon={faEye} />
           )}</button>
-          {errors.password && <p className="err-msg">{errors.password}</p>}
+          {errors.password && <span className="err-msg">{errors.password}</span>}
         </div>
+        
         <h4>Confirm Password</h4>
         <div className="relative-container-for-errmsg">
           <input
